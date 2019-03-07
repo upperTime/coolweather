@@ -6,16 +6,23 @@ import java.util.List;
 
 public class Weather {
 
+    @SerializedName("status")
     public String status;
 
+    @SerializedName("basic")
     public Basic basic;
 
-    public AQI aqi;
 
+    @SerializedName("now")
     public Now now;
 
-    public Suggestion suggestion;
+    @SerializedName("update")
+    public Update update;
+
+    @SerializedName("lifestyle")
+    public List<Lifestyle> lifestyleList;
 
     @SerializedName("daily_forecast")
     public List<Forecast> forecastList;
 }
+

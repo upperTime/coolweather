@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import com.example.coolweather.gson.Weather;
 import com.example.coolweather.util.HttpUtil;
@@ -51,8 +52,8 @@ public class AutoUpadteService extends Service {
             Weather weather=Utility.handleWeatherResponse(weatherString);
             String weatherId=weather.basic.weatherId;
 
-            String weatherUrl="https://free-api.heweather.com/s6/air/now?location="+weatherId+
-                    "&key=7f0e442b907544c991ac74d816aaa371";
+            String weatherUrl="https://free-api.heweather.net/s6/weather?location="
+                    +weatherId+"&key=21d48b792d51443a8e9b7f8618df43ba";
             HttpUtil.sendOkHttpRequest(weatherUrl, new Callback() {
                 @Override
                 public void onFailure(Call call, IOException e) {
@@ -61,13 +62,15 @@ public class AutoUpadteService extends Service {
 
                 @Override
                 public void onResponse(Call call, Response response) throws IOException {
-
                     String responseText=response.body().string();
                     Weather weather=Utility.handleWeatherResponse(responseText);
+                    //Log.e("fdf", "onCreate: "+weather );
                     if(weather!=null&&"ok".equals(weather.status)){
+                       // Log.e("hhhhh", "onResponse: "+ weather.status);
                         SharedPreferences.Editor editor=PreferenceManager.
                                 getDefaultSharedPreferences(AutoUpadteService.this).edit();
                         editor.putString("weather",responseText);
+                        Log.e("fdf", "onCreate: "+responseText );
                         editor.apply();
                     }
                 }
