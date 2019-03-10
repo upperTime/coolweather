@@ -4,8 +4,25 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+/**
+ * {
+ * 	"HeWeather6":[
+ *                {
+ * 			"basic":{},
+ * 			"update":{},
+ * 			"status":"ok",
+ * 			"now":{},
+ * 			"daily_forecast":[],
+ * 			"lifestyle":[]
+ *        }
+ * 	]
+ * }
+ */
 public class Weather {
 
+    /**
+     * "status":"ok",
+     */
     @SerializedName("status")
     public String status;
 
