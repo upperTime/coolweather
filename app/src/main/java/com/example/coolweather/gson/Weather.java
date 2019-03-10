@@ -6,15 +6,15 @@ import java.util.List;
 
 /**
  * {
- * 	"HeWeather6":[
- *                {
- * 			"basic":{},
- * 			"update":{},
- * 			"status":"ok",
- * 			"now":{},
- * 			"daily_forecast":[],
- * 			"lifestyle":[]
- *        }
+ *  * 	"HeWeather6":[
+ *  *                {
+ *  * 			"basic":{},
+ *  * 			"update":{},
+ *  * 			"status":"ok",
+ *  * 			"now":{},
+ *  * 			"daily_forecast":[],
+ *  * 			"lifestyle":[]
+ *  *        }
  * 	]
  * }
  */

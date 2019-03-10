@@ -89,7 +89,7 @@ public class WeatherActivity extends AppCompatActivity {
         SharedPreferences prefs=PreferenceManager.getDefaultSharedPreferences
                 (this);
         String weatherString =prefs.getString("weather",null);
-        Log.e("hhhhsd", "onCreate: "+weatherString );
+       // Log.e("hhhhsd", "onCreate: "+weatherString );
         String bingPic=prefs.getString("bing_pic",null);
         navButton.setOnClickListener(new View.OnClickListener() {
             @Override

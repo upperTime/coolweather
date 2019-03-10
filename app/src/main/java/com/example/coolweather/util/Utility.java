@@ -59,8 +59,7 @@ public class Utility {
         }
         return false;
     }
-
-    /**
+        /**
      * 解析和处理服务器返回的县级数据
      */
     public static boolean handleCountyResponse(String response,int cityId){
@@ -91,7 +90,7 @@ public class Utility {
             JSONObject jsonObject=new JSONObject(resopnse);
             JSONArray jsonArray=jsonObject.getJSONArray("HeWeather6");
             String weatherContent=jsonArray.getJSONObject(0).toString();
-            Log.e("jjj", "handleWeatherResponse: "+weatherContent);
+            //Log.e("jjj", "handleWeatherResponse: "+weatherContent);
             return new Gson().fromJson(weatherContent,Weather.class);
         }catch (Exception e){
             e.printStackTrace();
