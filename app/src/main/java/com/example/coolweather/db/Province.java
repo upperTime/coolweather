@@ -2,6 +2,18 @@ package com.example.coolweather.db;
 
 import org.litepal.crud.DataSupport;
 
+
+/**
+ *  * [
+ *  * {"id":1,"name":"北京"},
+ *  * {"id":2,"name":"上海"},
+ *  * {"id":3,"name":"天津"},
+ *  * {"id":4,"name":"重庆"},
+ *  * {"id":5,"name":"香港"},
+ *  * {"id":6,"name":"澳门"}
+ *  * ...]*/
+
+
 public class Province extends DataSupport {
     private int id;
 

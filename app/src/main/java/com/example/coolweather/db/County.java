@@ -2,6 +2,14 @@ package com.example.coolweather.db;
 
 import org.litepal.crud.DataSupport;
 
+/**
+ * [
+ * {"id":113,"name":"南京"},
+ * {"id":114,"name":"无锡"},
+ * {"id":115,"name":"镇江"},
+ * {"id":116,"name":"苏州"},
+ * {"id":117,"name":"南通"}
+ * ...]*/
 public class County extends DataSupport {
     private int id;
 
@@ -39,7 +47,5 @@ public class County extends DataSupport {
         return weatherId;
     }
 
-    public int getCityId() {
-        return cityId;
-    }
+
 }

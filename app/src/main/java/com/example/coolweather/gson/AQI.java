@@ -1,6 +1,7 @@
 package com.example.coolweather.gson;
 import com.google.gson.annotations.SerializedName;
 
+
 public class AQI {
 
     @SerializedName("aqi")
